@@ -626,10 +626,6 @@ bool NetlinkEvent::parseAsciiNetlinkMessage(char *buffer, int size) {
         }
         s += strlen(s) + 1;
     }
-    if(findParam("ALERT_NAME") !=NULL ) {
-        mSubsystem = strdup("qlog");
-        mAction = NlActionChange;
-    }
     return true;
 }
 
